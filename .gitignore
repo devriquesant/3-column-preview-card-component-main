@@ -1,6 +1,9 @@
+# Git push from Replit
+
 node_modules/
+Definitions/
+.git/
 .upm/
 .config/
 .replit
 replit.nix
-.Definitions/
