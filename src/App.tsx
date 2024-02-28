@@ -1,5 +1,8 @@
 import { ReactElement } from 'react';
-import './css/App.css'
+import { Helmet } from 'react-helmet';
+import { joinImagePath } from './utils';
+import './css/App.css';
+
 import data from './data/json/data.json';
 
 type CardInfo = {
@@ -7,8 +10,6 @@ type CardInfo = {
   description: string
 };
 
-const pathToImages: string = "src/data/images";
-const joinImagePath = ( imgPath: string ): string => `${pathToImages}/${imgPath}`;
 const dataInfo = data as CardInfo[];
 
 const GithubLink = "https://devriquesant.github.io/FrontendMentor-Projects/";
@@ -41,6 +42,13 @@ function CardComponent( { carType, description }: CardInfo ) {
         </div>
       </div>
     )
+}
+
+function preloadImages( images: string[] ){
+  var LinkPreload: JSX.Element[] = [];
+  for ( var image of images ){
+    LinkPreload.push( <link rel="preload" href={image}></link> )
+  }
 }
 
 
