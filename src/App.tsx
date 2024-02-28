@@ -1,6 +1,4 @@
 import { ReactElement } from 'react';
-import { Helmet } from 'react-helmet';
-import { joinImagePath } from './utils';
 import './css/App.css';
 
 import data from './data/json/data.json';
@@ -17,7 +15,7 @@ const SourceLink = "https://github.com/devriquesant/FrontendMentor-Projects/tree
 
 function CardComponent( { carType, description }: CardInfo ) {
   const cardID = carType.toLowerCase();
-  const imagePath = joinImagePath( `icon-${cardID}.svg` );
+  const imagePath = `icon-${cardID}.svg`;
   const title = carType[0].toUpperCase() + cardID.slice(1);
   
   return (

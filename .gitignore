@@ -1,7 +1,8 @@
 # Git push from Replit
 
 node_modules/
-Definitions/
+dist/
+
 .git/
 .upm/
 .config/
